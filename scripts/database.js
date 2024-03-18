@@ -1,6 +1,8 @@
 // database.js
+const database = {
 
-const venues = [
+
+venues : [
     { id: 1,  name: "The Cellar Moss",         address: "123 Vine Street",          squareFootage: 1500, maximumOccupancy: 100 },
     { id: 2,  name: "The Underground",         address: "456 Elm Avenue",           squareFootage: 1200, maximumOccupancy: 80  },
     { id: 3,  name: "The Loft",                address: "789 Oak Lane",             squareFootage: 1000, maximumOccupancy: 70  },
@@ -9,10 +11,10 @@ const venues = [
     { id: 6,  name: "The Cozy Corner",         address: "1515 Pine Road",           squareFootage: 900,  maximumOccupancy: 60  },
     { id: 7,  name: "The Lakeside Retreat",    address: "1717 Lakeview Avenue",     squareFootage: 2200, maximumOccupancy: 130 },
     { id: 8,  name: "The Urban Lounge",        address: "1919 Broadway Street",     squareFootage: 1600, maximumOccupancy: 90  }
-  ];
+  ],
   
   
-  const bands = [
+bands : [
   { id: 1, name: "Rocket Pumpkins",   numberOfMembers: 4,  musicalGenre: "Rock",      yearFormed: 2019,},
   { id: 2, name: "Electric Waves",    numberOfMembers: 3,  musicalGenre: "Pop",       yearFormed: 2020,},
   { id: 3, name: "Funky Fusion",      numberOfMembers: 5,  musicalGenre: "Funk",      yearFormed: 2018,},
@@ -21,11 +23,11 @@ const venues = [
   { id: 6, name: "Jazz Junction",     numberOfMembers: 4,  musicalGenre: "Jazz",      yearFormed: 2016,},
   { id: 7, name: "Country Roads",     numberOfMembers: 3,  musicalGenre: "Country",   yearFormed: 2022,},
   { id: 8, name: "Indie Vibes",       numberOfMembers: 3,  musicalGenre: "Indie",     yearFormed: 2020,}
-  ];
+  ],
   
   
   
-  const bookings = [
+bookings : [
     { id: 1,   dateOfBooking:  "2023-12-10",    venueId: 6 },
     { id: 2,   dateOfBooking:  "2023-12-14",    venueId: 3 },
     { id: 3,   dateOfBooking:  "2023-12-15",    venueId: 7 },
@@ -33,9 +35,9 @@ const venues = [
     { id: 5,   dateOfBooking:  "2023-12-24",    venueId: 4 },
     { id: 6,   dateOfBooking:  "2023-12-25",    venueId: 1 },
     
-  ];
+  ],
   
-  const bookingBandsJoiner = [
+  bookingBandsJoiner : [
   
     { id: 1,  bookingId: 1, bandId: 1 },
     { id: 2,  bookingId: 1, bandId: 6 },
@@ -52,7 +54,7 @@ const venues = [
   
   
   ]
-  
+}
   
   
  // export to get all venues

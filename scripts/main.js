@@ -1,6 +1,6 @@
-import { bookingsHTML } from './modules/bookingsModule.js';
-import { venueHTML } from './modules/venueModule.js';
-import { bandsHTML } from './modules/bandModule.js';
+import { bookingsHtml } from './bookingsModule.js';
+import { venueHtml } from './venueModule.js';
+import { bandsHtml } from './bandModule.js';
 
       
 const mainContainer = document.querySelector("#container");
@@ -15,19 +15,19 @@ const applicationHTML = `
     <div class="full-width">
     <h2 class="concert-dates">Concert Dates</h2>
 
-        <div class="bookings">${bookingsHTML}</div>
+        <div class="bookings">${bookingsHtml}</div>
     </div>
     <!-- Quadrants for Venues and Bands at the bottom -->
     <div class="quadrants">
         <!-- Venues list on the bottom left -->
         <div class="quadrant">
             <h2>Venues</h2>
-            <ul class="venues">${venueHTML}</ul>
+            <ul class="venues">${venueHtml}</ul>
         </div>
         <!-- Bands list on the bottom right -->
         <div class="quadrant">
             <h2>Bands</h2>
-            ${bandsHTML} 
+            ${bandsHtml} 
         </div>
     </div>
 </div>
