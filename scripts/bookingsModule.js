@@ -18,29 +18,32 @@ export const bookingsHtml = () => {
 }
 
 document.addEventListener("click", (theClickEvent) => {
-    const whatBookingWasClicked = theClickEvent.target;
+    const whatBookingWasClickedOn = theClickEvent.target;
+
+        if (whatBookingWasClickedOn.dataset.type === "booking") {
+            let bookingId = parseInt(whatBookingWasClickedOn.dataset.bookingid)
+
+            for (const booking of bookings) {
+
+                if (bookingId === booking.id) {
+
+                    for (band of bands) 
+                     if(whatBookingWasClickedOn.bandId === bands.id )
+
+                     window.alert(bands.name)
 
 
-    if (whatBookingWasClicked.dataset.type === "booking") {
-        let bookingId = parseInt(whatBookingWasClicked.dataset.bookingid)
 
-        for (const join of joiner) {
-            if (bookingId === join.bookingId) {
-                let matchingBandNames = []
-
-                for (const band of bands) {
-                    if (band.id === join.bandId)
-                        matchingBandNames.push(band.name);
 
                 }
-
-                window.alert(matchingBandNames)
+                
             }
-
         }
-    }
 
-});
+
+
+
+})
 
 
 
