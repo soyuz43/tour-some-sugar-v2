@@ -4,24 +4,42 @@ let bands = exportBands();
 
 
 // Construct HTML dynamically for bands
-export let bandsHtml = "";
-bands.forEach(band => {
-    bandsHtml += `<ul class="bands" id="band-${band.id}" 
-                   data-genre="${band.musicalGenre}" 
-                   data-members="${band.numberOfMembers}">
-                  <li>${band.name}</li>
-                  </ul>`; 
-});
+export const bandsHtml = () => {
+        let bandsHtml = ""
+
+        for (const band of bands) {
+            bandsHtml += `<li
+                        data-bandid="${band.id}"
+                        data-type="band">
+                        ${band.name}</li>` 
+        }
+    return bandsHtml
+}
 
 
-document.addEventListener("click", (clickEvent) =>{
-    const itemClicked = clickEvent.target;
+document.addEventListener("click", (theClickEvent) => {
+    const whatWasClicked = theClickEvent.target;
 
-    let bandElement = itemClicked.closest('.bands');
-    if (bandElement) {
-        // Use dataset to retrieve the stored data
-        const genre = bandElement.dataset.genre;
-        const members = bandElement.dataset.members;
-        window.alert(`Musical Genre: ${genre}, Number of Members: ${members}`);
+    if (whatWasClicked.dataset.type === "band") {
+        let bandId = parseInt(whatWasClicked.dataset.bandid)
+
+        for (const band of bands) {
+
+            if (bandId === band.id) {
+                
+                window.alert(`Gernre: ${band.musicalGenre} \nNumber of Memebers: ${band.numberOfMembers} \nYear Formed: ${band.yearFormed}`)
+                
+            }
+                
+        }
     }
 });
+
+
+
+    
+
+
+
+
+
