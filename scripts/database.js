@@ -28,32 +28,16 @@ bands : [
   
   
 bookings : [
-    { id: 1,   dateOfBooking:  "2023-12-10",    venueId: 6 },
-    { id: 2,   dateOfBooking:  "2023-12-14",    venueId: 3 },
-    { id: 3,   dateOfBooking:  "2023-12-15",    venueId: 7 },
-    { id: 4,   dateOfBooking:  "2023-12-23",    venueId: 1 },
-    { id: 5,   dateOfBooking:  "2023-12-24",    venueId: 4 },
-    { id: 6,   dateOfBooking:  "2023-12-25",    venueId: 1 },
+    { id: 1,   dateOfBooking:  "2023-12-10",    venueId: 6,   bandId: 3    },
+    { id: 2,   dateOfBooking:  "2023-12-14",    venueId: 3,   bandId: 3    },
+    { id: 3,   dateOfBooking:  "2023-12-15",    venueId: 7,   bandId: 3    },
+    { id: 4,   dateOfBooking:  "2023-12-23",    venueId: 1,   bandId: 3    },
+    { id: 5,   dateOfBooking:  "2023-12-24",    venueId: 4,   bandId: 3    },
+    { id: 6,   dateOfBooking:  "2023-12-25",    venueId: 1,   bandId: 3    },
     
   ],
   
-  bookingBandsJoiner : [
-  
-    { id: 1,  bookingId: 1, bandId: 1 },
-    { id: 2,  bookingId: 1, bandId: 6 },
-    { id: 3,  bookingId: 2, bandId: 5 },
-    { id: 4,  bookingId: 2, bandId: 2 },
-    { id: 5,  bookingId: 3, bandId: 1 },
-    { id: 6,  bookingId: 3, bandId: 3 },
-    { id: 7,  bookingId: 4, bandId: 6 },
-    { id: 8,  bookingId: 4, bandId: 4 },
-    { id: 9,  bookingId: 5, bandId: 7 },
-    { id: 10, bookingId: 5, bandId: 5 },
-    { id: 11, bookingId: 6, bandId: 1 },
-    { id: 12, bookingId: 6, bandId: 2 },
-  
-  
-  ]
+
 }
   
   
@@ -72,9 +56,6 @@ export const exportBookings = () => {
     return database.bookings.map(booking => ({...booking}));
   };
   
-  // export to get all booking-bands joiner data
-export const exportBookingBandsJoiner = () => {
-    return database.bookingBandsJoiner.map(joiner => ({...joiner}));
-  };
+
   
   

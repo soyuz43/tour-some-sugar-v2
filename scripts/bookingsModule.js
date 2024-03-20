@@ -1,8 +1,8 @@
-import { exportBookingBandsJoiner, exportBookings, exportBands } from "./database.js";
+import {  exportBookings, exportBands } from "./database.js";
 
 let bands = exportBands();
 let bookings = exportBookings();
-let joiner = exportBookingBandsJoiner();
+
 
 
 export const bookingsHtml = () => {
