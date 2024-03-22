@@ -1,0 +1,49 @@
+body {
+    background-image: url('https://i1.wp.com/www.dj-67.fr/wp-content/uploads/2019/05/audience-blur-concert-1763067-1.jpg?fit=5865%2C3915&ssl=1');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-attachment: fixed; /* Fixed position */
+}
+
+
+/* CSS for headings */
+h1 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+div.bookings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.booking {
+    margin-right: 25px; 
+    margin-bottom: 20px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+
+.quadrants {
+    display: flex;
+    justify-content: space-between; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.quadrant {
+    width: 48%; 
+}
+
+.bandNames {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.quadrant .venues li {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

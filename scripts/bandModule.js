@@ -9,6 +9,7 @@ export const bandsHtml = () => {
 
         for (const band of bands) {
             bandsHtml += `<li
+                        class="bandNames"
                         data-bandid="${band.id}"
                         data-type="band">
                         ${band.name}</li>` 
